@@ -1,0 +1,42 @@
+
+@use "../helpers/1-helpers" as helper;
+
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+    &__img {
+        flex: 1;
+        display: flex;
+        justify-content: center;        
+        
+        .img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            object-position: center center;
+            border-radius: helper.b-r(500);
+        }
+    }
+
+    &__text {
+        flex: 1;
+        text-align: center;
+    
+        .hero__btn {
+            margin: 1rem 0;
+        }
+    }
+}
+
+@include helper.mobile {
+    .hero {
+        flex-direction: column;
+
+        &__text {
+            margin-top: 1rem;
+        }
+    }
+}

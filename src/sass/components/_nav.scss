@@ -1,0 +1,27 @@
+
+@use "../helpers/1-helpers" as helper;
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-weight: helper.$fw;
+
+    img {
+        object-fit: contain;
+    }
+    
+    .nav {
+        padding: 0 10px;
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@include helper.tablet {
+    .header {
+        margin-bottom: 1rem;
+    }
+}

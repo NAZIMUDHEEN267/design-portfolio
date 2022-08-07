@@ -1,0 +1,13 @@
+
+@use "sass:string";
+@use "sass:math";
+
+// using for border radius
+@function b-r($val) {
+    @return unquote($val + "px");
+}
+
+// used for pixel value converting to rem value
+@function convertor ($num) {
+    @return unquote(math.div($num, 16) + "rem");
+}

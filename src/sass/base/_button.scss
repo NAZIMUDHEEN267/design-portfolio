@@ -1,0 +1,21 @@
+
+@use "../helpers/1-helpers" as helper;
+
+.btn {
+    padding: 10px 15px;
+    border-radius: helper.b-r(20);
+    font-weight: helper.$fw;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 3px rgba(helper.$black, .2);
+}
+
+.btn--red {
+    background: helper.$bt-c;
+}
+
+.btn--black {
+    background-color: helper.$bt-b;
+}

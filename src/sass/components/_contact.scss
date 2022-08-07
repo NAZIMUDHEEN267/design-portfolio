@@ -1,0 +1,33 @@
+@use "../helpers/1-helpers" as helper;
+
+.contact {
+  width: 100%;
+  height: helper.convertor(200);
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: helper.$black;
+  border-radius: helper.b-r(10);
+
+  @include helper.tablet {
+    border-radius: 0;
+  }  
+
+  &__text {
+    flex: 1;
+
+    .contact__headline {
+      color: helper.$white;
+    }
+  }
+}
+
+@include helper.tablet {
+  .contact {
+    text-align: center;
+    flex-direction: column;
+  }
+}

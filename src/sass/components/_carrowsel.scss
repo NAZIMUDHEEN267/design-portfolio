@@ -1,0 +1,62 @@
+@use "../helpers/1-helpers" as helper;
+
+$width: calc(100vw / 2.8);
+
+.carrowsel {
+  text-align: center;
+
+  // hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  .carrowsel__headline {
+    margin: 1rem 0;
+  }
+
+  &__slide {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: calc($width * 7);
+    overflow-x: scroll !important;
+    gap: 1rem;
+  }
+
+  &__item {
+    width: $width;
+    height: helper.convertor(250);
+    border-radius: helper.b-r(10);
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
+  }
+
+  &__arrows {
+    :first-child {
+      margin-right: 1rem;
+    }
+    > * {
+      margin-top: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@include helper.mobile {
+  $width: calc(100vw / 1.5);
+
+  .carrowsel__slide {
+    width: calc($width * 7);
+
+    .carrowsel__item {
+      width: $width;
+    }
+  }
+}

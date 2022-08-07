@@ -1,0 +1,41 @@
+@use "../helpers/1-helpers" as helper;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(234, 228, 201);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: helper.$desktop;
+  margin: 0 auto;
+}
+
+.text {
+  font-size: helper.$fs-s;
+  color: helper.$text;
+  line-height: 1.5;
+}
+
+.py {
+  padding: 2rem 0;
+}
+
+.headline {
+  font-weight: helper.$fw-l;
+  line-height: 1.3;
+  margin-bottom: .4rem;
+
+  @include helper.mobile {
+    font-size: 1.2rem;
+  }
+}
